@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+body{
+     font-family: 'Sawarabi Mincho', serif;
+}
+.login-section {
+     background: #ededed;
+     position: fixed;
+     left: 0;
+     width: 100%;
+     top: 0;
+     height: 100%;
+}
+.login-section .container{
+     position: absolute;
+     background: white;
+     width: 30%;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+}
+.login-section .container .header{
+     text-align: center;
+}
+.login-section .container .header h3 span{
+     color: #b10000;
+}
+.login-section .container .body{
+     padding: 10px 15px;
+}
+.login-section .container .body .form-group{
+     margin-bottom: 15px;
+}
+.login-section .container .body .form-group label{
+     display: block;
+}
+.login-section .container .body .form-group input{
+     width: 95%;
+     display: block;
+     padding: 10px;
+     background: #e3e3e3;
+     border: none;
+     margin-top: 5px;
+}
+.login-section .container .body .form-group input:focus{
+     border: none;
+     outline: none;
+}
+.login-section .container .body .form-group.button{
+     text-align: right;
+}
+.login-section .container .body .form-group.button button{
+     background: #b10000;
+     border: none;
+     color: white;
+     padding: 10px;
+     cursor: pointer;
+}
+.text-red{
+     color: red;
+     font-weight: bold;
+     font-size: 10px;
+}

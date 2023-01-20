@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+
+body {
+     font-family: "Sawarabi Mincho", serif;
+}
+
+.main-section {
+     background: #ffe6e6;
+     position: fixed;
+     left: 0;
+     width: 100%;
+     top: 0;
+     height: 100%;
+     overflow: scroll;
+     overflow-y: hidden;
+}
+
+.main-section .container {
+     height: 100%;
+}
+
+.add-new-board {
+     padding: 15px;
+}
+
+.add-new-board button {
+     cursor: pointer;
+}
+
+.board-list {
+     display: flex;
+     width: 100%;
+     margin-top: 15px;
+     background: #ffe6e6;
+     padding: 5px;
+     flex-wrap: nowrap;
+}
+
+.board-list .single-board {
+     display: block;
+     width: 20%;
+     float: left;
+     background: #f5f2f2;
+     margin-right: 15px;
+     height: max-content;
+     box-shadow: #9f9e9e 1px 1px 4px 0px;
+     flex: none;
+}
+
+.board-list .single-board .single-card {
+     display: block;
+     background: #d5d3d3;
+     padding: 5px 15px 5px;
+     cursor: pointer;
+     margin: 0 10px;
+     margin-bottom: 10px;
+}
+
+.board-list .single-board .single-card h3 {
+     font-weight: bold;
+     margin: 0;
+     font-size: 14px;
+}
+
+.board-list .single-board .single-card p {
+     margin: 0;
+     font-size: 14px;
+}
+
+.single-board .board-information {
+     background: black;
+     margin-bottom: 15px;
+     color: white;
+     padding: 5px;
+     position: relative;
+}
+
+.single-board .board-information .fas {
+     position: absolute;
+     right: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     cursor: pointer;
+}
+
+.single-board .board-information p {
+     margin: 0;
+}
+
+.delete-board {
+     text-align: right;
+     padding: 10px;
+}
+
+.delete-board button {
+     background: #b32121;
+     border: #b32121;
+     padding: 5px;
+     color: white;
+     cursor: pointer;
+}
+
+#create-board:focus {
+     outline: none;
+}
+#logout{
+     text-decoration: underline;
+     cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+     .board-list .single-board {
+          width: 80%;
+     }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+     .board-list .single-board {
+          width: 80%;
+     }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+     .board-list .single-board {
+          width: 60%;
+     }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+     .board-list .single-board {
+          width: 40%;
+     }
+}

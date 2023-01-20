@@ -1,0 +1,40 @@
+.input-check__body{
+  display:block;
+  position:relative;
+  width:16px;
+  height:16px;
+}
+.input-check__input{
+  opacity:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  cursor:inherit
+}
+.input-check__box{
+  display:block;
+  width:16px;
+  height:16px;
+  border-radius:1.2px;
+  background:#fff;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
+  transition:background .15s,box-shadow .15s
+}
+
+.input-check__icon{
+  pointer-events:none;
+  position:absolute;left:4px;top:5px;fill:#fff;transform:scale(0);
+  transition:fill .15s,transform .15s,visibility 0s .15s
+}
+
+.input-check__icon svg{display:block}
+.input-check__input:checked~.input-check__box{
+  background:#e52727;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)
+}
+
+.input-check__input:checked~.input-check__icon{
+  fill:#fff;transition-delay:0s,0s,0s;transform:scale(1)
+}
+.filter__title{display:block;border:none;padding:6px 10px;cursor:pointer;width:calc(100% + 20px);position:relative;color:inherit;font-weight:700;font-size:15px;line-height:18px;border-radius:2px;margin:0 -10px;transition:background-color .2s,fill .2s;background:transparent;fill:#ccc;text-align:left}.filter__title:focus,.filter__title:hover{transition-duration:.1s,.1s;background:#f2f2f2;fill:#b3b3b3}.filter__title:focus{outline:none}.filter__arrow{position:absolute;top:11px;transition:transform .2s;right:10px}.filter__arrow svg{display:block}.filter__body{margin:0 -1.5rem;overflow:hidden;visibility:hidden;height:0;opacity:0;transition:height .2s,opacity .2s,visibility 0s .2s}.filter__container{padding:10px 1.5rem 16px}.filter--opened .filter__body{transition-delay:0s,0s;visibility:visible;height:auto;opacity:1}.filter--opened .filter__arrow{transform:rotate(180deg)}.filter-categories__list{list-style:none;padding:0;margin:0;font-size:15px;line-height:18px}.filter-categories__list a{color:inherit;transition:color .15s}.filter-categories__list a:hover{color:#cb1818}.filter-categories__item{padding:5px 0;display:-ms-flexbox;display:flex}.filter-categories__item>a{-ms-flex-positive:1;flex-grow:1;padding-right:10px}.filter-categories__item--parent{position:relative;padding-left:14px}.filter-categories__item--current{font-weight:700}.filter-categories__item--child{position:relative;font-size:15px;padding-left:14px}.filter-categories__arrow{fill:#ccc;position:absolute;top:10px;left:0;transform:scaleX(1)}.filter-categories__arrow svg{display:block}.filter-categories__counter{font-size:12px;line-height:12px;padding-top:4px;font-weight:400;color:#6c757d}.filter-color__list{padding:2px 0;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:-4px}.filter-color__item{cursor:pointer;margin:4px}.filter-color__check{display:block}.filter-list__list{margin:-8px 0}.filter-list__item{padding:1px 0;cursor:pointer;display:-ms-flexbox;display:flex;margin:8px 0}.filter-list__input{-ms-flex-negative:0;flex-shrink:0;margin-right:7px}.filter-list__title{padding:1px 0;font-size:14px;line-height:16px;-ms-flex-positive:1;flex-grow:1}.filter-list__counter{padding-top:3px;font-size:12px;line-height:12px;color:#6c757d;margin-left:12px}.filter-list__item--disabled{cursor:default}.filter-list__item--disabled .filter-list__title{color:#6c757d}.filter-price__slider{margin-top:6px}.filter-price__title{padding-top:2px;font-size:14px}.filter-price__title-button{margin-top:14px;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center}.filter-rating__list{list-style:none;padding:0;margin:-8px 0}.filter-rating__item-label{padding:2px 0;cursor:pointer;display:-ms-flexbox;display:flex;margin:8px 0}.filter-rating__item-input{-ms-flex-negative:0;flex-shrink:0;margin-right:8px}.filter-rating__item-stars{padding:2px 0;-ms-flex-positive:1;flex-grow:1}.filter-rating__item-counter{padding-top:2px;font-size:12px;line-height:12px;color:#6c757d;margin-left:12px}.filter-vehicle__list{margin:-8px 0;padding:0;list-style:none}.filter-vehicle__item-label{padding:1px 0;cursor:pointer;display:-ms-flexbox;display:flex;margin:8px 0}.filter-vehicle__item-input{-ms-flex-negative:0;flex-shrink:0;margin-right:7px}.filter-vehicle__item-title{padding:1px 0;font-size:14px;line-height:16px;-ms-flex-positive:1;flex-grow:1}.filter-vehicle__item-counter{padding-top:3px;font-size:12px;line-height:12px;color:#6c757d;margin-left:12px}.filter-vehicle__item--disabled{cursor:default}.filter-vehicle__item--disabled .filter-vehicle__item-title{color:#999}.filter-vehicle__button{padding-top:12px}
