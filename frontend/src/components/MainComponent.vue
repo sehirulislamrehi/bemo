@@ -573,7 +573,7 @@
                                         form.append('board_name', board_name)
                                         form.append('board_id', id)
 
-                                        let edit_board_url = this.url + "edit-board/"
+                                        let edit_board_url = this.url + "edit-board"
 
                                         axios.post(`${edit_board_url}`, form)
                                         .then( res =>  {
@@ -656,7 +656,7 @@
                                         form.append('name', name)
                                         form.append('description', description)
 
-                                        let edit_card_url = this.url + "edit-card/"
+                                        let edit_card_url = this.url + "edit-card"
 
                                         axios.post(`${edit_card_url}`, form)
                                         .then( res =>  {

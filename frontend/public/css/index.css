@@ -225,25 +225,32 @@ body {
 }
 
 @media (min-width: 0px) and (max-width: 320px) {
-     .board-list .single-board {
+     .board-list .single-board,
+     .card-edit-popup .container{
           width: 80%;
      }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
-     .board-list .single-board {
+     .board-list .single-board,
+     .card-edit-popup .container,
+     .board-edit-popup .container{
           width: 80%;
      }
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
-     .board-list .single-board {
+     .board-list .single-board,
+     .card-edit-popup .container,
+     .board-edit-popup .container{
           width: 60%;
      }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-     .board-list .single-board {
+     .board-list .single-board,
+     .card-edit-popup .container,
+     .board-edit-popup .container{
           width: 40%;
      }
 }
