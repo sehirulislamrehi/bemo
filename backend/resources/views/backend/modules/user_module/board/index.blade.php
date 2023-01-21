@@ -34,46 +34,48 @@
 
                <div class="row">
                     <div class="col-md-12">
+                         <div class="card-header text-right">
+                            <a href="{{ route('board.export') }}">Export Board</a>
+                        </div>
                          <div class="card card-primary card-outline table-responsive">
-                         <div class="card-body">
-                              <table class="table table-bordered table-striped dataTable dtr-inline">
-                                   <thead>
-                                        <tr>
-                                             <th>ID</th>
-                                             <th>Name</th>
-                                             <th>Card</th>
-                                             <th>User</th>
-                                             <th>Status</th>
-                                        </tr>
-                                   </thead>
-                                   <tbody>
-                                        @forelse( $visitor_boards as $key => $visitor_board )
-                                        <tr>
-                                             <td>{{ $key + 1 }}</td>
-                                             <td>{{ $visitor_board->name }}</td>
-                                             <td>
-                                                  @foreach( $visitor_board->card as $card )
-                                                  <span class="badge badge-success">{{ $card->name }}</span>
-                                                  @endforeach
-                                             </td>
-                                             <td>{{ $visitor_board->visitor->name }}</td>
-                                             <td>{{ ($visitor_board->is_active == 'Y') ? 'Active' : 'Inactive' }}</td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                             <td colspan="10">No data found</td>
-                                        </tr>
-                                        @endforelse
-                                   </tbody>
-                                   <tfoot>
-                                        <tr>
-                                             <td>{{ $visitor_boards->links() }}</td>
-                                        </tr>
-                                   </tfoot>
-                              </table>
+                              <div class="card-body">
+                                   <table class="table table-bordered table-striped dataTable dtr-inline">
+                                        <thead>
+                                             <tr>
+                                                  <th>ID</th>
+                                                  <th>Name</th>
+                                                  <th>Card</th>
+                                                  <th>User</th>
+                                                  <th>Status</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             @forelse( $visitor_boards as $key => $visitor_board )
+                                             <tr>
+                                                  <td>{{ $key + 1 }}</td>
+                                                  <td>{{ $visitor_board->name }}</td>
+                                                  <td>
+                                                       @foreach( $visitor_board->card as $card )
+                                                       <span class="badge badge-success">{{ $card->name }}</span>
+                                                       @endforeach
+                                                  </td>
+                                                  <td>{{ $visitor_board->visitor->name }}</td>
+                                                  <td>{{ ($visitor_board->is_active == 'Y') ? 'Active' : 'Inactive' }}</td>
+                                             </tr>
+                                             @empty
+                                             <tr>
+                                                  <td colspan="10">No data found</td>
+                                             </tr>
+                                             @endforelse
+                                        </tbody>
+                                        <tfoot>
+                                             <tr>
+                                                  <td>{{ $visitor_boards->links() }}</td>
+                                             </tr>
+                                        </tfoot>
+                                   </table>
+                              </div>
                          </div>
-                         </div>
-
                     </div>
                </div>
 

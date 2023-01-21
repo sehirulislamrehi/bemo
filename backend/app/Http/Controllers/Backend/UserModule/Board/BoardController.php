@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend\UserModule\Board;
 use App\Http\Controllers\Controller;
 use App\Models\UserModule\VisitorBoard;
 use Exception;
-use Illuminate\Http\Request;
+use  Spatie\DbDumper\Databases\MySql;
 
 class BoardController extends Controller
 {
@@ -26,4 +26,31 @@ class BoardController extends Controller
         }
     }
     //index function end
+
+
+    //export_board function start
+    public function export_board(){
+        if( can("all_boards") ){
+            try{
+                $databaseName = "bemo";
+                $userName = "root";
+                $password = "";
+
+                MySql::create()
+                ->setDbName($databaseName)
+                ->setUserName($userName)
+                ->setPassword($password)
+                ->includeTables(['visitor_boards'])
+                ->dumpToFile('dump.sql');
+                
+            }
+            catch( Exception $e ){
+                return back()->with('error', $e->getMessage());
+            }
+        }
+        else{
+            return view("errors.403");
+        }
+    }
+    //export_board function end
 }

@@ -12,7 +12,9 @@
         "intervention/image": "^2.5",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "maatwebsite/excel": "^3.1",
         "nwidart/laravel-modules": "^8.3",
+        "spatie/db-dumper": "^2.21",
         "stripe/stripe-php": "^9.6",
         "yajra/laravel-datatables": "1.5",
         "yajra/laravel-datatables-oracle": "~9.0"
