@@ -23,7 +23,15 @@ class ModuleSeeder extends Seeder
                 'icon' => 'fas fa-users',
                 'position' => 1,
                 'route' => null
-            ]
+            ],
+            [
+                'id' => 2,
+                'name' => 'All Boards',
+                'key' => 'all_boards',
+                'icon' => 'fas fa-users',
+                'position' => 2,
+                'route' => "board.all"
+            ],
         ]);
     }
 }

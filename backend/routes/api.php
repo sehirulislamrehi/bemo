@@ -48,3 +48,6 @@ Route::get("/delete-card/{id}",[BoardController::class,'delete_card']);
 
 //edit board
 Route::post("/edit-board",[BoardController::class,'edit_board']);
+
+//edit card
+Route::post("/edit-card",[BoardController::class,'edit_card']);

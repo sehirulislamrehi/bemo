@@ -149,16 +149,57 @@ body {
      width: 30%;
      top: 50%;
      transform: translate(-50%,-50%);
+     padding: 15px;
 }
 .board-edit-popup .container h3{
      color: black;
      text-align: center;
 }
 .close-board-edit-popup{
-     margin: 15px;
-     cursor: pointer;
+     background: red;
+    border: red;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
 }
 .edit-board-value{
+     display: block;
+     margin: 5px 5px 0 auto;
+}
+
+
+.card-edit-popup{
+     position: fixed;
+     left: 0;
+     width: 100%;
+     top: 0;
+     height: 100%;
+     background: rgba(1,1,1,0.5);
+     display: none;
+     z-index: 2;
+}
+.card-edit-popup .container{
+     position: absolute;
+     background: white;
+     left: 50%;
+     height: max-content;
+     width: 30%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     padding: 15px;
+}
+.card-edit-popup .container h3{
+     color: black;
+     text-align: center;
+}
+.close-card-edit-popup{
+     background: red;
+    border: red;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+.edit-card-value{
      display: block;
      margin: 5px 5px 0 auto;
 }

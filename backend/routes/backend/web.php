@@ -55,6 +55,7 @@ Route::group(['prefix' => 'admindashboard', 'middleware' => 'auth'], function ()
         require_once 'user_module/user.php';
         require_once 'user_module/role.php';
         require_once 'user_module/visitor.php';
+        require_once 'user_module/board.php';
     });
     //user module routes end
 

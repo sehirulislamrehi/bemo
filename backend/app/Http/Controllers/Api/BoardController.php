@@ -284,7 +284,25 @@ class BoardController extends Controller
     //edit_board function start
     public function edit_board(Request $request){
         try{
+            $visitor_board = VisitorBoard::where("id", $request->board_id)->with("card")->first();
 
+            if( $visitor_board ){
+                $visitor_board->name = $request->board_name;
+
+                if( $visitor_board->save() ){
+                    return response()->json([
+                        'status' => 'success',
+                        'message' => 'Board updated',
+                        'data' => $visitor_board
+                    ], 200);
+                }
+            }
+            else{
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'No board found'
+                ], 200);
+            }
         }
         catch( Exception $e ){
             return response()->json([
@@ -294,4 +312,39 @@ class BoardController extends Controller
         }
     }
     //edit_board function end
+
+
+    //edit_card function start
+    public function edit_card(Request $request){
+        try{
+
+            $visitor_board_card = VisitorBoardCard::where("id", $request->id)->first();
+
+            if( $visitor_board_card ){
+                $visitor_board_card->name = $request->name;
+                $visitor_board_card->description = $request->description;
+
+                if( $visitor_board_card->save() ){
+                    return response()->json([
+                        'status' => 'success',
+                        'message' => 'Card updated',
+                        'data' => $visitor_board_card
+                    ], 200);
+                }
+            }
+            else{
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'No card found'
+                ], 200);
+            }
+        }
+        catch( Exception $e ){
+            return response()->json([
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ], 200);
+        }
+    }
+    //edit_card function end
 }

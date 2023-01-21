@@ -13,4 +13,7 @@ class VisitorBoard extends Model
         return $this->hasMany(VisitorBoardCard::class)->orderBy("position","asc");
     }
 
+    public function visitor(){
+        return $this->belongsTo(Visitor::class);
+    }
 }
