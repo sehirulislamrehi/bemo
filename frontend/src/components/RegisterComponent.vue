@@ -40,6 +40,7 @@
 </template>
 
 <style scoped>
+    @import url("/css/loader.css");
      @import url("/css/login.css");
 </style>
 

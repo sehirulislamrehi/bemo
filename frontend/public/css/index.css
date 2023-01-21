@@ -54,6 +54,23 @@ body {
      cursor: pointer;
      margin: 0 10px;
      margin-bottom: 10px;
+     position: relative;
+}
+
+.single-card .fa-trash{
+     position: absolute;
+     right: 15px;
+     top: 5px;
+     cursor: pointer;
+     color: red;
+}
+
+.single-card .fa-edit{
+     position: absolute;
+     right: 35px;
+     top: 5px;
+     cursor: pointer;
+     color: green;
 }
 
 .board-list .single-board .single-card h3 {
@@ -73,6 +90,7 @@ body {
      color: white;
      padding: 5px;
      position: relative;
+     cursor: pointer;
 }
 
 .single-board .board-information .fas {
@@ -106,6 +124,63 @@ body {
 #logout{
      text-decoration: underline;
      cursor: pointer;
+}
+.delete-board .add-card{
+     margin-left: 5px;
+     background: green;
+     border: green;
+}
+
+.board-edit-popup{
+     position: fixed;
+     left: 0;
+     width: 100%;
+     top: 0;
+     height: 100%;
+     background: rgba(1,1,1,0.5);
+     display: none;
+     z-index: 2;
+}
+.board-edit-popup .container{
+     position: absolute;
+     background: white;
+     left: 50%;
+     height: max-content;
+     width: 30%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+}
+.board-edit-popup .container h3{
+     color: black;
+     text-align: center;
+}
+.close-board-edit-popup{
+     margin: 15px;
+     cursor: pointer;
+}
+.edit-board-value{
+     display: block;
+     margin: 5px 5px 0 auto;
+}
+
+
+.form-group{
+     margin-bottom: 15px;
+}
+.form-group label{
+     display: block;
+}
+.form-group input{
+     width: 95%;
+     display: block;
+     padding: 10px;
+     background: #e3e3e3;
+     border: none;
+     margin-top: 5px;
+}
+.form-group input:focus{
+     border: none;
+     outline: none;
 }
 
 @media (min-width: 0px) and (max-width: 320px) {
